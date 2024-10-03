@@ -12,13 +12,12 @@ body{
     width: 100vw;
     height: 200px;
     background-color: rgb(142, 188, 228);
-    text-align: center;
-    padding-top: 110px;
     margin-bottom: 20px;
+    animation: cambiarcolor 3s ease-in-out infinite;
 }
 img{
-    width: 50%;
-    height: 50%;
+    width: 300px;
+    height: 200 px;
 }
 #padre{
     width: 100vw;
@@ -36,4 +35,68 @@ img{
     text-align: center;
     
 
+}
+#titulo{
+    margin: 0px;
+    animation: mover 10s ease-in-out infinite;
+}
+@keyframes mover {
+    0%{
+        transform: translateY(0px);
+
+    }
+    17%{
+        transform: translateY(50%) translateX(50%);
+
+    }
+    34%{
+        transform: translateY(0%) translateX(100%);
+    }
+    50%{
+        transform: translateY(100%) translateX(100%);
+    }
+    68%{
+        transform: translateY(50%) translateX(50%);
+    
+    }
+    84%{
+        transform: translateY(100%) translateX(0%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
+}
+@keyframes cambiarcolor {
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: aqua;
+    }
+}
+header{
+    position: absolute;
+    background-color: rgb(20, 20, 20);
+    width: 100%;
+}
+header nav{
+    background-color: black;
+    color: white;
+    margin-bottom: 30px;
+
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav ul li{
+    float: left;
+}
+header nav ul li a{
+    text-decoration-line: none;
+    color: white;
+    padding: 16px;
+}
+header nav ul li a:hover{
+    background-color: orange;
 }
